@@ -1,7 +1,7 @@
 <%= raw Setting.index_html %>
 
 <div class="home_suggest_topics panel panel-default">
-  <div class="panel-heading">社区精华帖</div>
+  <div class="panel-heading">社區精華帖</div>
   <div class="panel-body topics row">
     <% cache(["home_suggest_topics", @excellent_topics]) do %>
     <%
@@ -17,11 +17,10 @@
     <% end %>
   </div>
   <div class="panel-footer">
-    <%= link_to "查看更多精华帖...", excellent_topics_path %>
+    <%= link_to "查看更多精華帖...", excellent_topics_path %>
   </div>
 </div>
 
 <% if !mobile? %>
   <%= render "/shared/index_sections" %>
-  <%= render "/shared/hot_locations" %>
 <% end %>
